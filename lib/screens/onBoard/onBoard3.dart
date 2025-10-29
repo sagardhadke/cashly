@@ -92,7 +92,7 @@ class _Onboard3State extends State<Onboard3> {
                   ),
                   onPressed: () => Navigator.pushReplacementNamed(
                     context,
-                    AppRoutes.home,
+                    AppRoutes.welcome,
                   ),
                   child: Text("Continue"),
                 ),
