@@ -17,7 +17,7 @@ class _SplashPageState extends State<SplashPage> {
 
   Future<void> gotoOnBoard() async {
     Future.delayed(Duration(seconds: 2), () {
-      Navigator.pushReplacementNamed(context, AppRoutes.home);
+      Navigator.pushReplacementNamed(context, AppRoutes.onboard1);
     });
   }
 
