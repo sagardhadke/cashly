@@ -54,7 +54,7 @@ class MyWelcome extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(25),
-                      border: Border.all(width: 2, color: Color(0XFFC1C3C7)),
+                      border: Border.all(width: 1, color: Color(0XFFC1C3C7)),
                     ),
                     child: Row(
                       spacing: 10,
@@ -72,7 +72,7 @@ class MyWelcome extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(25),
-                      border: Border.all(width: 2, color: Color(0XFFC1C3C7)),
+                      border: Border.all(width: 1, color: Color(0XFFC1C3C7)),
                     ),
                     child: Row(
                       spacing: 10,
@@ -97,7 +97,7 @@ class MyWelcome extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(25),
-                      border: Border.all(width: 2, color: Color(0XFFC1C3C7)),
+                      border: Border.all(width: 1, color: Color(0XFFC1C3C7)),
                     ),
                     child: Row(
                       spacing: 10,
@@ -139,9 +139,14 @@ class MyWelcome extends StatelessWidget {
                       foregroundColor: Colors.white,
                       textStyle: TextStyle(fontSize: 18),
                     ),
-                    onPressed: () =>
-                        Navigator.pushReplacementNamed(context, AppRoutes.home),
-                    child: Text("Login with my account"),
+                    onPressed: () => Navigator.pushReplacementNamed(
+                      context,
+                      AppRoutes.signIn,
+                    ),
+                    child: Text(
+                      "Login with my account",
+                      style: TextStyle(fontWeight: FontWeight.w600),
+                    ),
                   ),
                 ),
                 SizedBox(height: 25),

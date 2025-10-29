@@ -1,3 +1,5 @@
+import 'package:cashly/screens/auth/signin/signin.dart';
+import 'package:cashly/screens/auth/sugnup/signup.dart';
 import 'package:cashly/screens/auth/welcome.dart';
 import 'package:cashly/screens/home_page.dart';
 import 'package:cashly/screens/onBoard/onBoard1.dart';
@@ -13,6 +15,8 @@ class AppRoutes {
   static const String onboard2 = "/onBoard2";
   static const String onboard3 = "/onBoard3";
   static const String welcome = "/welcome";
+  static const String signIn = "/signIn";
+  static const String signUp = "/signUp";
 
   static Map<String, WidgetBuilder> mRoutes = {
     AppRoutes.splash: (_) => SplashPage(),
@@ -21,5 +25,7 @@ class AppRoutes {
     AppRoutes.onboard2: (_) => Onboard2(),
     AppRoutes.onboard3: (_) => Onboard3(),
     AppRoutes.welcome: (_) => MyWelcome(),
+    AppRoutes.signIn: (_) => MySignin(),
+    AppRoutes.signUp: (_) => MySignUp(),
   };
 }
