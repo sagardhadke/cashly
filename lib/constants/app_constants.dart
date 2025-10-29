@@ -1,4 +1,5 @@
 import 'package:cashly/model/category_model.dart';
+import 'package:cashly/model/expense_model.dart';
 
 class AppConstants {
   static List<CategoryModel> categories = [
@@ -57,5 +58,74 @@ class AppConstants {
       title: "Savings",
       imgPath: "assets/icons/Savings.png",
     ),
+  ];
+
+  static List<Map<String, dynamic>> expenseHistory = [
+     {
+      "title": "Medical Expense",
+      "amount": 850,
+      "imgPath": "assets/icons/Healthcare.png",
+      "catName": "Healthcare",
+    },
+    {
+      "title": "Morning Coffee",
+      "amount": 50,
+      "imgPath": "assets/icons/Coffee.png",
+      "catName": "Coffee",
+    },
+    {
+      "title": "Monthly Rent",
+      "amount": 18000,
+      "imgPath": "assets/icons/Rent.png",
+      "catName": "Rent",
+    },
+    {
+      "title": "Grocery Shopping",
+      "amount": 855,
+      "imgPath": "assets/icons/Groceries.png",
+      "catName": "Groceries",
+    },
+    {
+      "title": "Gym Membership",
+      "amount": 4000,
+      "imgPath": "assets/icons/Fitness.png",
+      "catName": "Fitness",
+    },
+    {
+      "title": "Netflix Subscription",
+      "amount": 199,
+      "imgPath": "assets/icons/Entertainment.png",
+      "catName": "Entertainment",
+    },
+    {
+      "title": "Bus Pass",
+      "amount": 250,
+      "imgPath": "assets/icons/Transport.png",
+      "catName": "Transport",
+    },
+    {
+      "title": "Electricity Bill",
+      "amount": 6050,
+      "imgPath": "assets/icons/Utilities.png",
+      "catName": "Utilities",
+    },
+    {
+      "title": "Birthday Gift",
+      "amount": 50,
+      "imgPath": "assets/icons/Gifts.png",
+      "catName": "Gifts",
+    },
+    {
+      "title": "Investment Deposit",
+      "amount": 300,
+      "imgPath": "assets/icons/Investment.png",
+      "catName": "Investment",
+    },
+    {
+      "title": "Dinner Out",
+      "amount": 4525,
+      "imgPath": "assets/icons/Food.png",
+      "catName": "Food",
+    },
   ];
 }
