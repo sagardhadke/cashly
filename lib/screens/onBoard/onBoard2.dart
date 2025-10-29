@@ -1,8 +1,8 @@
 import 'package:cashly/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 
-class Onboard1 extends StatelessWidget {
-  const Onboard1({super.key});
+class Onboard2 extends StatelessWidget {
+  const Onboard2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,16 +14,16 @@ class Onboard1 extends StatelessWidget {
           child: Column(
             children: [
               Text(
-                "Get reliable, premium financial insights",
+                "Access trusted tools for smarter budgeting",
                 style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 10),
               Text(
-                "Track a curated daily summary of your expenses and budgets, tailored to your needs",
+                "Get a daily overview of your spending and savings, personalized just for you inside the app",
                 style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
               ),
               SizedBox(height: 20),
-              Image.asset("assets/images/onBoard1.png"),
+              Image.asset("assets/images/onBoard2.png"),
               SizedBox(height: 45),
               SizedBox(
                 width: double.infinity,
@@ -39,7 +39,7 @@ class Onboard1 extends StatelessWidget {
                   ),
                   onPressed: () => Navigator.pushReplacementNamed(
                     context,
-                    AppRoutes.onboard2,
+                    AppRoutes.onboard3,
                   ),
                   child: Text("Next"),
                 ),
@@ -52,6 +52,7 @@ class Onboard1 extends StatelessWidget {
                 child: Container(
                   height: 48,
                   width: double.infinity,
+
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(25),
