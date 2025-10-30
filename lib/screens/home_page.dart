@@ -34,11 +34,15 @@ class MyHome extends StatelessWidget {
                     Text(
                       "Detail Activity",
                       style: TextStyle(
-                        fontSize: 21,
-                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                        color: Color(0XFF252525),
                       ),
                     ),
-                    Text("See all", style: TextStyle(fontSize: 21)),
+                    Text(
+                      "See all",
+                      style: TextStyle(fontSize: 14, color: Color(0XFF444A51)),
+                    ),
                   ],
                 ),
                 ListView.builder(
@@ -46,36 +50,58 @@ class MyHome extends StatelessWidget {
                   physics: NeverScrollableScrollPhysics(),
                   itemCount: AppConstants.expenseHistory.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return ListTile(
-                      title: Text(
-                        AppConstants.expenseHistory[index]['title'],
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      // leading: CircleAvatar(
-                      //   child: Image.asset(
-                      //     height: 35,
-                      //     AppConstants.expenseHistory[index]['imgPath'],
-                      //   ),
-                      // ),
-                      leading: Container(
-                        width: 45,
-                        height: 45,
-                        alignment: Alignment.center,
+                    return Padding(
+                      padding: EdgeInsetsGeometry.symmetric(vertical: 10),
+                      child: Container(
                         decoration: BoxDecoration(
-                          color: Color(0XFFF5F2F8),
-                          borderRadius: BorderRadius.circular(25),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
                         ),
-                        child: Image.asset(
-                          AppConstants.expenseHistory[index]['imgPath'],
-                          height: 35,
-                          width: 35,
+                        child: ListTile(
+                          title: Text(
+                            AppConstants.expenseHistory[index]['title'],
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          // leading: CircleAvatar(
+                          //   child: Image.asset(
+                          //     height: 35,
+                          //     AppConstants.expenseHistory[index]['imgPath'],
+                          //   ),
+                          // ),
+                          leading: Container(
+                            width: 50,
+                            height: 50,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              color: Color(0XFFF7E1E5),
+                              borderRadius: BorderRadius.circular(25),
+                            ),
+                            child: Image.asset(
+                              AppConstants.expenseHistory[index]['imgPath'],
+                              height: 24,
+                              width: 24,
+                            ),
+                          ),
+                          subtitle: Text(
+                            AppConstants.expenseHistory[index]['catName'],
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Color(0XFF5C656E),
+                            ),
+                          ),
+                          trailing: Text(
+                            "-${AppConstants.expenseHistory[index]['amount']}",
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.red,
+                            ),
+                          ),
                         ),
-                      ),
-                      subtitle: Text(
-                        AppConstants.expenseHistory[index]['catName'],
-                      ),
-                      trailing: Text(
-                        "${AppConstants.expenseHistory[index]['amount']}",
                       ),
                     );
                   },
